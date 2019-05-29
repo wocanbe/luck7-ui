@@ -1,0 +1,52 @@
+.#{$badge-prefix} {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+
+  &-normal {
+    position: absolute;
+    z-index: $badge-index;
+    transform: translateX(50%);
+    // box-shadow: 0 0 0 1px #fff;
+    transform-origin: -10% center;
+    top: -10px;
+    right: 0;
+    height: 20px;
+    border-radius: 10px;
+    min-width: 20px;
+    background: $badge;
+    border: 1px solid transparent;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+    padding: 0 6px;
+    font-size: $font-smaller;
+    white-space: nowrap;
+
+    a,a:hover {
+      color: #fff;
+    }
+
+    &-alone {
+      top: auto;
+      display: block;
+      position: relative;
+      transform: translateX(0);
+    }
+  }
+
+  &-dot {
+    position: absolute;
+    z-index: $badge-index;
+    transform: translateX(-50%);
+    // box-shadow: 0 0 0 1px #fff;
+    transform-origin: 0 center;
+    top: -4px;
+    right: -8px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: $badge;
+  }
+}

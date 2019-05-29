@@ -1,0 +1,19 @@
+@import './tools/grid';
+
+@media (max-width: $screen-xs) {
+  @include make-grid(-xs);
+}
+
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {
+  @include make-grid(-sm);
+}
+
+// 768px到992px之间的不归多屏支持管，走正常的栅格组件
+
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  @include make-grid(-md);
+}
+
+@media (min-width: $screen-lg) {
+  @include make-grid(-lg);
+}

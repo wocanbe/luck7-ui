@@ -1,0 +1,52 @@
+.lt-board-key {
+  text-align: center;
+}
+.lt-password-board {
+  position: fixed;
+  height: 160px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $keyboard-bg;
+  text-align: center;
+  border-top: 1px solid $keyboard-border;
+  box-sizing: content-box;
+  z-index: 9999;
+  .num-boxs {
+    width: 100%;
+    .num-btn {
+      width: 33.3333%;
+      height: 40px;
+      float: left;
+      border-right: 1px solid $keyboard-border;
+      border-bottom: 1px solid $keyboard-border;
+      line-height: 40px;
+      font-size: $font-big;
+      font-weight: 600;
+      color: $text;
+      background-color: $keyboard-bg;
+      box-sizing: border-box;
+      &:active,&.active {
+        color: $main;
+        background: $keyboard-border;
+      }
+    }
+    .ok-btn {
+      width: 33.3333%;
+      height: 40px;
+      float: left;
+      border-right: 1px solid $keyboard-border;
+      border-bottom: 1px solid $keyboard-border;
+      line-height: 40px;
+      font-size: $font-big;
+      font-weight: 600;
+      box-sizing: border-box;
+      color: $keyboard-ok;
+      background: #fff;
+      &:active,&.active {
+        color: #fff;
+        background: $keyboard-ok;
+      }
+    }
+  }
+}

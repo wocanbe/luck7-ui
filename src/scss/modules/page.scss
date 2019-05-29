@@ -1,0 +1,52 @@
+.#{$page-prefix} {
+  height: 30px;
+  float: right;
+  margin-top: 8px;
+  clear: right;
+  height: 28px;
+  line-height: 28px;
+  color: $text;
+  &-input {
+    border: 1px solid $page-border;
+    width: 28px;
+    text-align: center;
+  }
+  &-box {
+    display: inline-block;
+    .#{$page-prefix}-item {
+      padding: 0 4px;
+      background: transparent;
+      vertical-align: top;
+      display: inline-block;
+      font-size: 13px;
+      min-width: 35.5px;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0;
+      &.active {
+        color: $primary;
+        cursor: default;
+      }
+    }
+    &.hasbg {
+      .#{$page-prefix}-item {
+        margin: 0 5px;
+        background-color: $page-bg;
+        min-width: 30px;
+        border-radius: 2px;
+        &.active {
+          background-color: $primary;
+          color: #fff;
+        }
+      }
+    }
+    &.smail {
+      .#{$page-prefix}-item {
+        border-color: transparent;
+        font-size: $font-small;
+        min-width: 22px;
+      }
+    }
+  }
+}

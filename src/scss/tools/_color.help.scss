@@ -1,0 +1,30 @@
+/**
+scss颜色算法
+Sass的颜色函数清单，从大的方面主要分为RGB、HSL(色相饱和度亮度)和Opacity三大类函数
+1、rgba
+rgba($linkColor, 0.3)
+2、lighten / darken / saturate / desaturate
+lighten / darken 是基于 HSL 明度变换，这个比较适合 button 按钮的 normal 态和 hover 态变换
+saturate / desaturate 是基于 HSL 饱和度 变换, 产生的颜色很丑，不太实用
+3、tint / shade
+阿里的 Ant Design 早期版本使用了 tint / shade 色彩算法，通过增加 白色（tint） 和 黑色（shade） 的占比来生成系列色。
+这个在项目中会更加实用，不过要注意新生成的颜色与文本对比度需满足 WCAG 2.0 对比度要求。
+*/
+/*
+实用颜色函数
+mix($color-1,$color-2,$weight): 颜色混合，$weight默认值为0.5,表示第一个颜色占比50%。
+lighten($color,$amount): 亮度值可以是0~1之间，不过常用的一般都在3%~20%之间。
+darken($color,$amount): 同上, lighten与darken只是单纯地对颜色的亮度进行加减计算。而且亮度的下限和上限为0~100%。
+complement($color): 获取互补色，相当于adjust-hue($color,180deg)
+grayscale($color): 将颜色转化为灰度，相当于desaturate($color,100%)
+adjust-hue($color,$degrees): 通过调整颜色的色相换算一个新颜色。他需要一个颜色和色相度数值。通常这个度数值是在-360deg至360deg之间，当然了可以是百分数：
+*/
+// 七色卡
+$redBase: #DC143C;
+$orangeBase: saturate(lighten(adjust_hue($redBase, 39), 5), 7);//#f37a16
+$yellowBase: saturate(lighten(adjust_hue($redBase, 64), 6), 13);//#fbdc14
+$greenBase: desaturate(darken(adjust_hue($redBase, 102), 2), 11);//#73c620
+$blueBase: saturate(darken(adjust_hue($redBase, 201), 2), 1);//#12b7d4
+$purpleBase: saturate(darken(adjust_hue($redBase, 296), 2), 1);//#a012d4
+$blackBase: #777;
+$bgc: #fff;

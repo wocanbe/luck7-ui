@@ -1,0 +1,20 @@
+@mixin loop-grid-columns($index, $class) {
+  @while $index>0 {
+    .#{$grid-col}#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+      flex: 0 0 percentage(($index / $grid-columns));
+    }
+    .#{$grid-col}#{$class}-order-#{$index}  {
+      order: $index;
+    }
+    $index:$index - 1;
+  }
+
+  .#{$grid-col}#{$class}-#{$index} {
+    display: none;
+  }
+}
+
+@mixin make-grid($class: '') {
+  @include loop-grid-columns($grid-columns, $class);
+}

@@ -1,0 +1,89 @@
+// 通用
+* {
+  box-sizing: border-box;
+}
+*:before,*:after {
+  box-sizing: border-box;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+
+// 常用
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.animate-spin {
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+.animate-pulse {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    animation: pulse 1.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  }
+}

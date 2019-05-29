@@ -1,0 +1,95 @@
+// Prefix
+$css-prefix: lt-;
+
+// theme config
+$info      : #3bf;
+$success   : #0c6;
+$warning   : #f90;
+$error     : #f30;
+
+$primary   : #39f;
+$bg        : #f1fcff;
+$text      : #036;
+$disable   : #bbbec4;
+$disable-bg: #f7f7f7;
+$cancel    : #aaa;
+$border    : #e9eaec;
+$mask      : rgba(0,0,0,.6);
+$shadow    : rgba(0,0,0,.2);
+
+// font
+$font-family  : "Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$font         : 16px;
+$font-small   : 14px;
+$font-smaller : 12px;
+$font-big     : 18px;
+$font-bigger  : 24px;
+
+// icon
+$icon-prefix: lc-icon;
+$icon-font-family: "luck7font";
+$icon-font-path: "~luck7-ui/assets/font/iconfont";
+$icon-font-version: "1.0.0";
+@import "~luck7-ui/assets/font/list";
+
+// grid
+$grid-columns: 10;
+$grid-row: lc-row;
+$grid-col: lc-col;
+
+// grid-mult
+$screen-xs: 480px; // Extra small screen / phone
+$screen-sm: 768px; // Small screen / tablet
+$screen-md: 992px; // Medium screen / desktop
+$screen-lg: 1200px; // Large screen / wide desktop
+
+// badge
+$badge-prefix: lt-badge;
+$badge: #ff5722;
+
+// date-picker
+$picker-prefix: lt-date-picker;
+
+// dialog
+$dialog-prefix: lt-dialog;
+$toast-prefix: lt-toast;
+
+// keyboard
+// $keyboard-bg: #fff;
+// $keyboard-border: #ccc;
+// $keyboard-ok: #67B1F1;
+
+// loading
+$loading-prefix: lt-loading;
+$loading-ani-path: "~luck7-ui/assets/loading/";
+$loading: #fff;
+$loading-text: #fff;
+
+// page
+$page-prefix: lt-page;
+$page-bg: $disable-bg;
+$page-border: $cancel;
+
+// swiper
+$swiper-prefix: lt-swiper;
+
+// tabs
+$tabs-prefix: lt-tabs;
+$tabs-border: #e6e6e6;
+$tabs-brief-bg: #f2f2f2;
+
+// z-index
+$badge-index: 10;
+$picker-index: 100;
+$loading-index: 150;
+$dialog-index: 200;
+// import base style
+@import "./base";
+
+// theme style
+body {
+  font-family: $font-family;
+}
+a {
+  color: $primary;
+}
